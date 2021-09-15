@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt("Số lượng số nguyên tố cần in ra"))
+    let count = 0;
+    let text = "";
+    let N = 2;
+    let isPrime = true;
+    while (count < numbers) {
+        if (N == 2) {
+            isPrime = true;
+        } else {
+            if (N % 2 == 0) {
+                isPrime = false;
+            } else {
+                for (var i = 2; i <= Math.sqrt(N); i++) {
+                    if (N % i == 0) {
+                        isPrime = false;
+                        break;
+                    } else {
+                        isPrime = true;
+                    }
+                }
+            }
+        }
+        if (isPrime) {
+            text = N + " là số nguyên tố " + "<br>";
+            count++;
+            document.write(text);
+        }
+        N++;
+    }
+</script>
+</body>
+</html>
