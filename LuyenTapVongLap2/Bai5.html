@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let loanAmount = +prompt("Nhập số tiền vay ban đầu đơn vị triệu")
+    let month = +parseInt(prompt("Nhập số tháng muốn trả hết nợ "));
+    let rate = +prompt("Nhập lãi xuất hàng tháng đơn vị %")
+    let total = loanAmount ;
+    let laiThangi;
+    for ( i = 0 ; i< month ;i++){
+        laiThangi = rate*total/100;
+        total += laiThangi;
+    }
+    alert("Số tiền bạn phải trả là " +total)
+</script>
+</body>
+</html>
