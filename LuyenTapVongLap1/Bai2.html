@@ -6,15 +6,27 @@
 </head>
 <body>
 <script>
+    let nhietDo;
+    do {
+        nhietDo = parseInt(prompt("Nhập nhiệt độ hiện tại :"))
+        if (nhietDo > 100) {
+            alert("Yêu cầu giảm nhiệt độ ");
+        }
+        if (nhietDo < 20) {
+            alert("Yêu cầu tăng nhiệt độ ");
+        }
+    } while (nhietDo > 100 || nhietDo < 20);
+
+    alert("Nhiệt độ bình thường");
 <!--  Mình hiểu đề bài là lặp vô hạn để luôn lấy dữ liệu đầu vào có đúng ko vậy :(-->
-  for (let i = 0; ; i++) {
-    let nhietDo = parseInt(prompt("Nhập nhiệt độ hiện tại :"))
-    if (nhietDo > 100) {
-      alert("Yêu cầu giảm nhiệt độ ");
-    }else if (nhietDo <20 ){
-      alert("Yêu cầu tăng nhiệt độ ")
-    } else continue
-  }
+  // for (let i = 0; ; i++) {
+  //   let nhietDo = parseInt(prompt("Nhập nhiệt độ hiện tại :"))
+  //   if (nhietDo > 100) {
+  //     alert("Yêu cầu giảm nhiệt độ ");
+  //   }else if (nhietDo <20 ){
+  //     alert("Yêu cầu tăng nhiệt độ ")
+  //   } else continue
+  // }
 
 </script>
 </body>
